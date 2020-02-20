@@ -9,9 +9,9 @@ class GoogleTrendAnalyzer:
         self.headers = []
         with open(filename, 'r') as f:
             self.title = f.readline().strip()
-            f.readline() # read in a blank line and do nothing with it
+            f.readline()
             reader = csv.reader(f)
-            self.headers = reader.__next__() # give me the first row of the column headers
+            self.headers = reader.__next__()
             for row in reader:
                 self.table.append(row)
 
